@@ -7,6 +7,8 @@ import java.util.Scanner;
  * 
  * Finds optimum building cost to provide every citizen access to a library
  * as per hackerrank.com/challenges/torque-and-development
+ * 
+ * Uses depth-first search on a graph represented by an adjacency list
  */
 
 public class Solution {
@@ -39,7 +41,7 @@ public class Solution {
     }
 
     /**
-     * Depth first search finds connected components & # of nodes(cities) in them
+     * Depth-first search finds connected components & # of nodes(cities) in them
      * To each component: -1 to find # of edges(roads), * by roadCost and add 1 libCost
      * 
      * @return Optimum road and library building cost
