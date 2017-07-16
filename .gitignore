@@ -11,8 +11,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-.classpath
-.project
+*.classpath
+*.project
 
 ### Java ###
 *.class
@@ -21,5 +21,5 @@ local.properties
 *.fxbuild
 
 ### Meh solutions ###
-/hackerrank-birthday-cake-candles
-/hackerrank-mini-max-sum
+hackerrank-birthday-cake-candles/
+hackerrank-mini-max-sum/
