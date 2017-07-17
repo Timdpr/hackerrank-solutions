@@ -15,13 +15,14 @@ public class Solution {
         int listSize = in.nextInt();
         int operations = in.nextInt();
         long[] endpointArray = new long[listSize+1];
+        // indexes are inclusive so 2nd endpoint needs to be right of index
 
         for (int i=0; i<operations; i++) {
             int a = in.nextInt();
             int b = in.nextInt();
             int k = in.nextInt();
             endpointArray[a-1] += k;
-            endpointArray[b] -=k;
+            endpointArray[b] -= k;
         }        
         long total = 0;
         long max = 0;
