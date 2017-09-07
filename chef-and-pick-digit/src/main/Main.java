@@ -1,7 +1,8 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -20,14 +21,29 @@ public class Main {
         char[] results = new char[N*N];
         int i = 0;
 
-        int n = 0; // TODO: create method of enumerating all permutations of N etc...if they are all unique, good!
-
-        if (n >= 65 && n <= 90) { // if n in A-Z range
-            results[i] = ((char) n);
-            i++;
+        if (N < 17) {
+            return results;
         }
-        Arrays.sort(results);
-        return results;
+
+        int[] NPerms = getNPerms(N); // TODO: create method of enumerating all permutations of N etc...if they are all unique, good!
+
+        for (int n : NPerms) {
+            if (n >= 65 && n <= 90) { // if n in A-Z range
+                results[i] = ((char) n);
+                i++;
+            }
+            Arrays.sort(results);
+            return results;
+        }
+    }
+
+    private static int[] getNPerms(int N) {
+        HashSet<Integer> result = new HashSet<>();
+        String NString = Integer.toString(N);
+        int i = 0;
+        for (char c : NString) {
+
+        }
     }
 
     public static void printList(char[] list) {
